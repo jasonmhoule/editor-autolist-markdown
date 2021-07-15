@@ -1,0 +1,22 @@
+## **Simplify bullet list usage when editing Markdown text for your tiddlers**
+
+[This plugin](https://jasonmhoule.github.io/editor-autolist-markdown/) simplifies the creation and editing of these lists by handling bullet level and content intelligently, right in the text editor.
+
+Bulleted lists in Markdown are created using the following syntax:
+
+```
+- First level
+  - Second level
+    - Third level
+  - Second level again
+```
+
+## Keybindings
+
+- **Tab / Shift-Tab:** indent/un-indent a line. If you select multiple bullet lines, these are each indented/unindented (preserving any existing difference of levels), allowing you to reorganize whole list sections at once.
+- **Alt-Shift-Up / Alt-Shift-Down:** move the selected text (multiple lines if selected) up or down one line, preserving list levels.
+- **Enter:** from a list level, creates a new bullet at the same list level. Hitting Enter a second time (from the now empty list level) removes the empty list level and concludes the list.
+
+**Note:** the plugin is currently configured to apply these rules only for tiddlers of type: `text/x-markdown` and so **requires a separate plugin** to actually render tiddlers written in Markdown. This plugin was written and tested using the [Markdown plugin](https://tiddlywiki.com/plugins/tiddlywiki/markdown/) authored by [Jeremy Ruston](https://github.com/Jermolene/TiddlyWiki5/tree/master/plugins/tiddlywiki/markdown).
+
+This plugin is based on the [Editor AutoLists](https://saqimtiaz.github.io/sq-tw/editor-autolists.html) plugin by [Saq Imtiaz](https://github.com/saqimtiaz), adapted for Markdown and extended.

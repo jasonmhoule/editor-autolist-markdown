@@ -1,0 +1,35 @@
+{
+  "name": "twpluginskeleton",
+  "version": "0.0.4",
+  "author": "You",
+  "description": "TiddlyWiki Plugin Skeleton",
+  "homepage": "...",
+  "license": "...",
+  "bugs": "...",
+  "keywords": [
+    "tiddlywiki",
+    "tiddlywiki5",
+    "wiki",
+    "plugin",
+    "ThirdFlow"
+  ],
+  "main": "main.js",
+  "scripts": {
+    "start": "tiddlywiki editions/develop --verbose --server 8080 $:/core/save/all text/plain text/html & echo $! > tw.pid",
+    "stop": "kill `cat tw.pid` && rm tw.pid",
+    "winstart": "start \"TW5 Plugin Develop\" cmd /c tiddlywiki editions/develop --verbose --server 8080 $:/core/save/all text/plain text/html",
+    "winstop": "taskkill /fi \"WINDOWTITLE eq TW5 Plugin Develop\"",
+    "develop": "tiddlywiki editions/develop --verbose --server 8080 $:/core/save/all text/plain text/html",
+    "develop_external": "tiddlywiki editions/develop --verbose --server 8080 $:/core/save/all text/plain text/html \"\" \"\" 0.0.0.0",
+    "release": "tiddlywiki editions/release --verbose --build release"
+  },
+  "dependencies": {
+    "tiddlywiki": ">=5.1.20",
+    "tw5-thirdflow": ">=1.2.10"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+  "engines": {
+    "node": ">=0.8.2"
+  }
+}

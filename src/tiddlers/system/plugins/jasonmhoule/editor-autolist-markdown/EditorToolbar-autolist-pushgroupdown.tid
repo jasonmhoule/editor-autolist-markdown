@@ -1,0 +1,17 @@
+button-classes: sq-text-editor-btn-hidden
+caption: 
+condition: [<targetTiddler>type[text/x-markdown]]
+created: 20210713141128951
+description: 
+icon: $:/core/images/list-bullet
+modified: 20210715144000705
+shortcuts: ((autolist-markdown-pushgroupdown))
+tags: $:/tags/EditorToolbar
+title: $:/plugins/jasonmhoule/editor-autolist-markdown/EditorToolbar-autolist-pushgroupdown
+type: text/vnd.tiddlywiki
+
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="autolist-markdown"
+	mode="pushgroupdown"
+/>

@@ -1,0 +1,14 @@
+author: Jason Houle
+core-version: >=5.1.22
+created: 20210715131527184
+description: Markdown bullet list utility for TW5
+list: readme license history
+modified: 20210715131714942
+plugin-type: plugin
+source: https://github.com/jasonmhoule/editor-autolist-markdown
+tags: 
+title: $:/plugins/jasonmhoule/editor-autolist-markdown
+type: application/json
+version: 0.0.1
+
+{"tiddlers": {}}

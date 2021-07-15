@@ -1,0 +1,8 @@
+additional-tiddlers: [prefix[$:/config/ShortcutInfo/autolist]] [prefix[$:/config/shortcuts/autolist]] 
+created: 20210715131527183
+modified: 20210715152711987
+release: yes
+title: $:/config/ThirdFlow/plugins/$:/plugins/jasonmhoule/editor-autolist-markdown
+type: text/vnd.tiddlywiki
+
+editor-autolist-markdown.tid

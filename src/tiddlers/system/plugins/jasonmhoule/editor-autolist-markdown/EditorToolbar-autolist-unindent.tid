@@ -1,0 +1,17 @@
+button-classes: sq-text-editor-btn-hidden
+caption: 
+condition: [<targetTiddler>type[text/x-markdown]]
+created: 20200804122848593
+description: 
+icon: $:/core/images/list-bullet
+modified: 20210715144027982
+shortcuts: ((autolist-markdown-unindent))
+tags: $:/tags/EditorToolbar
+title: $:/plugins/jasonmhoule/editor-autolist-markdown/EditorToolbar-autolist-unindent
+type: text/vnd.tiddlywiki
+
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="autolist-markdown"
+	mode="unindent"
+/>

@@ -1,0 +1,17 @@
+button-classes: sq-text-editor-btn-hidden
+caption: 
+condition: [<targetTiddler>type[text/x-markdown]]
+created: 20200803165453913
+description: 
+icon: $:/core/images/list-bullet
+modified: 20210715145455311
+shortcuts: ((autolist-markdown-newline))
+tags: $:/tags/EditorToolbar
+title: $:/plugins/jasonmhoule/editor-autolist-markdown/EditorToolbar-autolist-newline
+type: text/vnd.tiddlywiki
+
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="autolist-markdown"
+	mode="newline"
+/>

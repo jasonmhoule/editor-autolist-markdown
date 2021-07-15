@@ -1,0 +1,9 @@
+created: 20200803171440138
+modified: 20210715134922371
+tags: $:/tags/Stylesheet
+title: $:/plugins/jasonmhoule/editor-autolist-markdown/styles
+type: text/vnd.tiddlywiki
+
+.sq-text-editor-btn-hidden {
+	display: none;
+}
