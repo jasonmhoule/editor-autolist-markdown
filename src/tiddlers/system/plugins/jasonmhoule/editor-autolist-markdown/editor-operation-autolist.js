@@ -3,7 +3,7 @@ created: 20200803160356743
 type: application/javascript
 title: $:/plugins/jasonmhoule/editor-autolist-markdown/editor-operation-autolist
 tags: 
-modified: 20210715144039325
+modified: 20210719160643262
 module-type: texteditoroperation
 \*/
 (function(){
@@ -80,7 +80,7 @@ exports["autolist-markdown"] = function(event,operation) {
             operation.replacement = vs.updatedLinesContents.join("\n");
             vs.newLinesEnd = vs.lineStart + operation.replacement.length;
             vs.newSelStart = Math.max(operation.selStart + vs.selAdd, vs.lineStart);
-            vs.newSelEnd = vs.newLinesEnd - (vs.linesEnd - operation.selEnd);
+            vs.newSelEnd = Math.max(vs.newLinesEnd - (vs.linesEnd - operation.selEnd), vs.lineStart);
             operation.newSelStart = vs.newSelStart;
             operation.newSelEnd = vs.newSelEnd;
             //var myObj4 = { obj : "vs", var : vs };
