@@ -3,7 +3,7 @@ created: 20200803160356743
 type: application/javascript
 title: $:/plugins/jasonmhoule/editor-autolist-markdown/editor-operation-autolist
 tags: 
-modified: 20210719160643262
+modified: 20210719200723255
 module-type: texteditoroperation
 \*/
 (function(){
@@ -105,7 +105,7 @@ exports["autolist-markdown"] = function(event,operation) {
 				var prefix = match[1];
 				operation.replacement = "\n" + prefix;
 				operation.cutStart = operation.selStart;
-				operation.cutEnd = operation.selStart;
+				operation.cutEnd = operation.selEnd; //operation.selStart;
 				
 				//check if there is trailing whitespace on the line we are on
 				// var lineEnd = $tw.utils.findFollowingLineBreak(operation.text,operation.selStart);
@@ -115,7 +115,7 @@ exports["autolist-markdown"] = function(event,operation) {
 				}
 				
 				operation.newSelStart = operation.selStart + prefix.length + 1;
-				operation.newSelEnd = operation.selEnd + prefix.length + 1;
+				operation.newSelEnd = operation.newSelStart //operation.selEnd + prefix.length + 1;
 			}
 		} else if(mode == "pushgroupup" && vs.prevlineStart != vs.lineStart) {
 			// grab the previous line and place it below the selection 
