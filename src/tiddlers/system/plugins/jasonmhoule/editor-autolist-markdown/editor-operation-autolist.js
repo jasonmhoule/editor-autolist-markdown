@@ -3,7 +3,7 @@ created: 20200803160356743
 type: application/javascript
 title: $:/plugins/jasonmhoule/editor-autolist-markdown/editor-operation-autolist
 tags: 
-modified: 20210719200723255
+modified: 20210720010949689
 module-type: texteditoroperation
 \*/
 (function(){
@@ -103,6 +103,12 @@ exports["autolist-markdown"] = function(event,operation) {
 			} else {
 				// continue indent level on next line
 				var prefix = match[1];
+				if(operation.selStart - vs.lineStart < prefix.length) {
+					operation.selStart = vs.lineStart + prefix.length
+				}
+				if(operation.selEnd - vs.lineStart < prefix.length) {
+					operation.selEnd = vs.lineStart + prefix.length
+				}
 				operation.replacement = "\n" + prefix;
 				operation.cutStart = operation.selStart;
 				operation.cutEnd = operation.selEnd; //operation.selStart;
