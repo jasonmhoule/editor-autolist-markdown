@@ -3,7 +3,7 @@ created: 20200803160356743
 type: application/javascript
 title: $:/plugins/jasonmhoule/editor-autolist-markdown/editor-operation-autolist
 tags: 
-modified: 20210720010949689
+modified: 20210724192011820
 module-type: texteditoroperation
 \*/
 (function(){
@@ -62,7 +62,7 @@ exports["autolist-markdown"] = function(event,operation) {
 	
 	var mode = event.paramObject? event.paramObject.mode : undefined;
 
-	//ensure we only handle lines starting with * or #
+	//ensure we only handle lines starting with correct prefix
 	if(match != null && match[1]) {
 		// check if we are handling indent level
 		if(mode === "indent" || mode === "unindent") {
@@ -93,7 +93,7 @@ exports["autolist-markdown"] = function(event,operation) {
 			var prefixRegEx = /^((\s\s)*-)$/;
 			var trimmedMatch = trimmed.match(prefixRegEx);
 			if(trimmedMatch != null) {
-				// the line only contains * or # characters and optional whitespace
+				// the line only contains prefix characters and optional whitespace
 				//terminate the list
 				operation.replacement = "\n";
 				operation.cutStart = vs.lineStart;
@@ -121,7 +121,7 @@ exports["autolist-markdown"] = function(event,operation) {
 				}
 				
 				operation.newSelStart = operation.selStart + prefix.length + 1;
-				operation.newSelEnd = operation.newSelStart //operation.selEnd + prefix.length + 1;
+				operation.newSelEnd = operation.newSelStart;
 			}
 		} else if(mode == "pushgroupup" && vs.prevlineStart != vs.lineStart) {
 			// grab the previous line and place it below the selection 
@@ -144,7 +144,7 @@ exports["autolist-markdown"] = function(event,operation) {
 		operation.cutStart = operation.selStart;
 		operation.cutEnd = operation.selEnd;
 		operation.newSelStart = operation.selStart + 1;
-		operation.newSelEnd = operation.selEnd + 1;
+		operation.newSelEnd = operation.newSelStart;
 	}
 };
 
