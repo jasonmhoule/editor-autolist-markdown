@@ -1,10 +1,10 @@
 button-classes: sq-text-editor-btn-hidden
 caption: 
-condition: [<targetTiddler>type[text/x-markdown]]
+condition: [<targetTiddler>type[text/x-markdown]] [<targetTiddler>type[text/markdown]]
 created: 20210713141128951
 description: 
 icon: $:/core/images/list-bullet
-modified: 20210715144000705
+modified: 20230824165103590
 shortcuts: ((autolist-markdown-pushgroupdown))
 tags: $:/tags/EditorToolbar
 title: $:/plugins/jasonmhoule/editor-autolist-markdown/EditorToolbar-autolist-pushgroupdown
