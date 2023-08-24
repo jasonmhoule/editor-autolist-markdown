@@ -1,5 +1,5 @@
 created: 20210715131713633
-modified: 20210715145800394
+modified: 20230824165716802
 tags: 
 title: $:/plugins/jasonmhoule/editor-autolist-markdown/readme
 type: text/vnd.tiddlywiki
@@ -23,6 +23,6 @@ Bulleted lists in Markdown are created using the following syntax:
 * ''Alt-Shift-Up / Alt-Shift-Down:'' move the selected text (multiple lines if selected) up or down one line, preserving list levels.
 * ''Enter:'' from a list level, creates a new bullet at the same list level. Hitting Enter a second time (from the now empty list level) removes the empty list level and concludes the list.
 
-''Note:'' the plugin is currently configured to apply these rules only for tiddlers of type: `text/x-markdown` and so ''requires a separate plugin'' to actually render tiddlers written in Markdown. This plugin was written and tested using the [[Markdown plugin|https://tiddlywiki.com/plugins/tiddlywiki/markdown/]] authored by [[Jeremy Ruston|https://github.com/Jermolene/TiddlyWiki5/tree/master/plugins/tiddlywiki/markdown]].
+''Note:'' the plugin is currently configured to apply these rules only for tiddlers of type: `text/x-markdown` or `text/markdown` and so ''requires a separate plugin'' to actually render tiddlers written in Markdown. This plugin was written and tested using the [[Markdown plugin|https://tiddlywiki.com/plugins/tiddlywiki/markdown/]] authored by [[Jeremy Ruston|https://github.com/Jermolene/TiddlyWiki5/tree/master/plugins/tiddlywiki/markdown]].
 
 This plugin is based on the [[Editor AutoLists|https://saqimtiaz.github.io/sq-tw/editor-autolists.html]] plugin by [[Saq Imtiaz|https://github.com/saqimtiaz]], adapted for Markdown and extended.

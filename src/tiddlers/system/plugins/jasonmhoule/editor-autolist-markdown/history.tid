@@ -1,9 +1,10 @@
 created: 20210715131713629
-modified: 20210724192417443
+modified: 20230824165631291
 tags: 
 title: $:/plugins/jasonmhoule/editor-autolist-markdown/history
 type: text/vnd.tiddlywiki
 
+* ''0.1.0'' -- add `text/markdown` to types covered by the plugin.
 * ''0.0.3'' -- fix non-list newline bug.
 * ''0.0.2'' -- smoothed out expected newline operations.
 * ''0.0.1'' -- initial release.
